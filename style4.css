@@ -242,3 +242,53 @@ button:active {
     color: red;
     border-top: 1px solid white;
 }
+
+@media (max-width: 768px) {
+    nav .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-container .links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .links a {
+        margin: 10px 0;
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .footer_container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .Aboutus h3,
+    .teammem h3,
+    .contact h3 {
+        font-size: 1.5rem;
+    }
+
+    .Aboutus p,
+    .teammem a,
+    .contact p {
+        font-size: 0.9rem;
+    }
+}
