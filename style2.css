@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    font-family: 'Roboto Slab',serif;
+    width: 1320px;
+    margin: 0px auto;
+    background: #e0e0e0;
+    box-shadow: -10px -5px 3px rgba(0, 0, 0, 0.15), 10px 5px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* ------------------------------Navbar------------------------------ */
+
+nav{
+    position: sticky;
+    top:0; /* Dính ở trên cùng */
+    z-index: 1000; /* Điều kiện để thanh navbar luôn trên các phần tử khác */
+    width: 100%;
+    height: 8vh;
+    background-color: #222;
+    box-shadow: 
+        0 0 5px rgba(138, 43, 226, 0.8),
+        0 0 10px rgba(138, 43, 226, 0.6),
+        0 0 15px rgba(138, 43, 226, 0.4),
+        0 0 20px rgba(138, 43, 226, 0.2);
+    
+}
+
+nav .nav-container{
+    width: 80%;
+    margin: 0 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-container .logo{
+    color: white;
+}
+
+.nav-container .links{
+    display: flex;
+}
+
+.links a{
+    position: relative;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.links a::before{
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    height: 3px;
+    width: 0%;
+    border-radius: 20px;
+    background-color: rgb(14,191,14);
+    transition: 0.2s ease;
+}
+
+.links a:hover::before{
+    width: 100%;
+}
+
+/* ------------------------------THUMB------------------------------ */
+
+.video video{
+    margin-top: 0px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ------------------------------MAIN------------------------------ */
+
+#main{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    background: linear-gradient(to right, #FFFACD, #E6F7D4);
+}
+
+#left {
+    width: 75%;
+    padding: 10px;
+    background: #FFFFE0;
+    border-radius: 10px;
+    box-shadow: -10px -5px 3px rgba(0, 0, 0, 0.3), 10px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+.noidung {
+    padding: 25px;
+}
+  
+.noidung hr{
+    margin: 20px;
+}
+
+#left h1 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 35px;
+    text-align: center;
+    color: #0d1128;
+}
+  
+#left h2{
+    border-left: 6px solid red;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.chu {
+    font-size: 17px;
+    margin-bottom: 25px;
+    text-indent: 60px;
+    text-align: justify;
+    line-height: 25px;
+}
+  
+.anh {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+}
+
+#right h1{
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 22px;
+    text-align: center;
+    background: lightgray;
+}
+
+.mucluc {
+    padding: 15px;
+}
+  
+.danhmuc {
+    padding: 5px;
+    border-bottom: 1px solid gray;
+}
+  
+.danhmuc li {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+  
+.danhmuc a {
+    color: black;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    font-size: 18px;
+}
+  
+.danhmuc a:hover {
+    color: red;
+    font-weight: 500;
+}
+
+/* SCROLL BUTTON*/
+.scroll--top {
+    background: #e388ff;
+    position: fixed;
+    bottom: 10%;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #e388ff;
+    transition: opacity 0.4s ease, visibility 0.4s ease; /* Thêm transition */
+    opacity: 0; /* Ẩn nút mặc định */
+    visibility: hidden; /* Để tránh không gian chiếm giữ */
+  }
+  
+  .scroll--top.show {
+    opacity: 1; /* Hiển thị nút */
+    visibility: visible; /* Hiển thị nút */
+  }
+  
+  /* Biểu tượng mũi tên */
+  .scroll--top:before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px'%3E%3Cpath fill='%23fff' d='M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: 100%;
+    content: "";
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .scroll--top:focus {
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+    border-color: #d85ffd;
+    background-color: #d85ffd;
+    outline: none!important;
+  }
+
+/* ------------------------------Footer------------------------------ */
+
+.footer{
+    background-color: black;
+}
+
+.footer_container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15rem;
+    padding: 20px 10px;
+    color:white;
+}
+
+/*ABOUT US - VỀ CHÚNG TÔI*/
+.Aboutus h3{
+    font-size:2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.75);
+}
+
+.Aboutus p span{
+    font-size:1.5rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.Aboutus p{
+    font-size: 1rem;
+    text-align: justify;
+    word-spacing: 5px;
+}
+
+/*Team Members*/
+.teammem h3{
+    font-size:2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.75);
+}
+
+.teammem span{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.teammem a{
+    text-decoration: none;
+    color:white;
+    font-size: 1.2rem;
+    word-spacing: 5px;
+    display: block;
+    margin:10px 0px;
+}
+
+.teammem a:hover {
+    text-decoration: none;
+    color:aqua;
+    font-size: 1.2rem;
+    word-spacing: 5px;
+    font-weight: bold;
+}
+/*CONTACT - LIÊN LẠC*/
+
+.contact h3{
+    font-size:2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.75);
+}
+
+.contact span{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.contact p{
+    color:white;
+    font-size: 1rem;
+    word-spacing: 5px;
+    display: block;
+    margin:10px 0px;
+}
+
+.footer_bar{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: red;
+    border-top: 1px solid white;
+}

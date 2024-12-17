@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Roboto Slab',serif;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    display:none;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+/* ------------------------------Navbar------------------------------ */
+
+nav{
+    position: absolute;
+    width: 100%;
+    height: 8vh;
+    background-color: #222;
+    box-shadow: 
+        0 0 5px rgba(138, 43, 226, 0.8),
+        0 0 10px rgba(138, 43, 226, 0.6),
+        0 0 15px rgba(138, 43, 226, 0.4),
+        0 0 20px rgba(138, 43, 226, 0.2);
+    
+}
+
+nav .nav-container{
+    width: 80%;
+    margin: 0 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-container .logo{
+    color: white;
+}
+
+.nav-container .links{
+    display: flex;
+}
+
+.links a{
+    position: relative;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.links a::before{
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    height: 3px;
+    width: 0%;
+    border-radius: 20px;
+    background-color: rgb(14,191,14);
+    transition: 0.2s ease;
+}
+
+.links a:hover::before{
+    width: 100%;
+}
+
+/* ------------------------------HOME------------------------------ */
+
+.home{
+    width: 100%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('img/trangchu/trangchumainbg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home h1{
+    font-size: clamp(2rem,1rem + 6vw, 5rem);
+    text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000;
+}
+
+.home p{
+    font-size: clamp(1.1rem,0.5rem + 3vw, 2.2rem);
+    text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000;
+}
+
+.home i{
+    font-size: clamp(2rem,1rem + 5vw, 4rem);
+    transition: 0.2s linear;
+    color:white;
+}
+
+.home i:hover{
+    color:red;
+    scale: 1.3;
+}
+
+/* ------------------------------KPVT------------------------------ */
+.explore{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    box-shadow: 0 0 50px 20px black;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading{
+    text-align: center;
+    color: white;
+    line-height: 8rem;
+    font-size: clamp(1.5rem,0.7rem + 3vw, 2rem);
+}
+
+.sub-heading{
+    width: 60%;
+    text-align: center;
+    color: white;
+    font-size: clamp(0.8rem,0.5rem + 2vw, 1.5rem);
+}
+
+.explore .places{
+    margin-top: 20px;
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    display: grid;
+    gap: 1rem;
+    padding: 0 10px;
+    grid-template-columns:repeat(3,1fr);
+}
+
+.places .card{
+    border-radius:10px;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.places .card img{
+    width: 100%;
+    height: 100%;
+    transition: 0.2s ease-out;
+}
+
+.places .card .main-card{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    padding: 15px 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: 0.2s linear
+}
+
+.places .card:hover img{
+    scale: 1.1;
+}
+
+
+.places .card:hover .main-card{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.explore .more a{
+    color: white;
+    text-decoration: none;
+    line-height: 4rem;
+}
+
+.explore .more a i{
+    transition: 0.3s linear;
+}
+
+.explore .more a:hover i{
+    transform: translateX(10px);
+}
+
+/* ------------------------------Cẩm nang------------------------------ */
+
+.gallery{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.gallery_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+    gap: 2rem;
+}
+
+.image_gallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    scale: 0.75;
+}
+
+.gallery_col{
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+}
+
+.gallery_col img{
+    border-radius: 5rem;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+}
+
+.gallery_content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+
+.gallery h2{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.gallery p{
+    font-size: 1.2rem;
+    text-align: justify;
+    padding-right: 120px;
+}
+
+.gallery .btn{
+    padding: 8px 40px;
+    color: white;
+    border: 2px solid rgb(4,183,168);
+    background-color: rgb(4,183,168);
+    outline: none;
+    border-radius: 20px;
+    margin: 20px 0px;
+    transition: 0.2s ease-in-out;
+}
+
+.gallery .btn:hover{
+    border: 2px solid rgb(4,183,168);
+    color: rgb(4,183,168);
+    background-color: transparent;
+}
+
+/* ------------------------------Footer------------------------------ */
+
+.footer{
+    background-color: black;
+}
+
+.footer_container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15rem;
+    padding: 20px 10px;
+    color:white;
+}
+
+/*ABOUT US - VỀ CHÚNG TÔI*/
+.Aboutus h3{
+    font-size:2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.75);
+}
+
+.Aboutus p span{
+    font-size:1.5rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.Aboutus p{
+    font-size: 1rem;
+    text-align: justify;
+    word-spacing: 5px;
+}
+
+/*Team Members*/
+.teammem h3{
+    font-size:2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.75);
+}
+
+.teammem span{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.teammem a{
+    text-decoration: none;
+    color:white;
+    font-size: 1.2rem;
+    word-spacing: 5px;
+    display: block;
+    margin:10px 0px;
+}
+
+.teammem a:hover {
+    text-decoration: none;
+    color:aqua;
+    font-size: 1.2rem;
+    word-spacing: 5px;
+    font-weight: bold;
+}
+/*CONTACT - LIÊN LẠC*/
+
+.contact h3{
+    font-size:2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.75);
+}
+
+.contact span{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.contact p{
+    color:white;
+    font-size: 1rem;
+    word-spacing: 5px;
+    display: block;
+    margin:10px 0px;
+}
+
+.footer_bar{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: red;
+    border-top: 1px solid white;
+}
+
+
+/* ------------------------------Mobile Styles------------------------------ */
+@media (max-width: 768px) {
+    nav .nav-container {
+        flex-direction: column; /* Đặt các phần tử trong navbar thành cột */
+        align-items: center; /* Căn giữa các phần tử */
+    }
+
+    .nav-container .links {
+        margin-top: 10px; /* Thêm khoảng cách giữa logo và các liên kết */
+    }
+
+    .home h1 {
+        font-size: 3rem; /* Giảm kích thước font cho tiêu đề */
+    }
+
+    .home p {
+        font-size: 1.5rem; /* Giảm kích thước font cho đoạn văn */
+    }
+
+    .explore .places {
+        grid-template-columns: repeat(1, 1fr); /* Chỉ hiển thị 1 cột cho các thẻ */
+    }
+
+    .gallery_container {
+        flex-direction: column; /* Đặt các phần tử trong gallery thành cột */
+        align-items: center; /* Căn giữa các phần tử */
+    }
+
+    .gallery .btn {
+        padding: 8px 20px; /* Giảm kích thước nút */
+    }
+
+    .footer_container {
+        grid-template-columns: 1fr; /* Đặt footer thành 1 cột */
+        text-align: center; /* Căn giữa nội dung footer */
+    }
+
+    .footer_bar {
+        font-size: 0.7rem; /* Giảm kích thước font cho footer */
+    }
+}

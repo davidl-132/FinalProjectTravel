@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    font-family: 'Roboto Slab',serif;
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    background: #e0e0e0;
+    box-shadow: -10px -5px 3px rgba(0, 0, 0, 0.15), 10px 5px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* ------------------------------Navbar------------------------------ */
+
+nav{
+    position: sticky;
+    top:0; /* Dính ở trên cùng */
+    z-index: 1000; /* Điều kiện để thanh navbar luôn trên các phần tử khác */
+    width: 100%;
+    height: 8vh;
+    background-color: #222;
+    box-shadow: 
+        0 0 5px rgba(138, 43, 226, 0.8),
+        0 0 10px rgba(138, 43, 226, 0.6),
+        0 0 15px rgba(138, 43, 226, 0.4),
+        0 0 20px rgba(138, 43, 226, 0.2);
+    
+}
+
+nav .nav-container{
+    width: 80%;
+    margin: 0 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-container .logo{
+    color: white;
+}
+
+.nav-container .links{
+    display: flex;
+}
+
+.links a{
+    position: relative;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.links a::before{
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    height: 3px;
+    width: 0%;
+    border-radius: 20px;
+    background-color: rgb(14,191,14);
+    transition: 0.2s ease;
+}
+
+.links a:hover::before{
+    width: 100%;
+}
+
+/* ------------------------------CONTACT FORM------------------------------ */
+
+body{
+    background-image: url(img/bgcontact.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.container {
+    width: 400px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #80bdff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e388ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #d85ffd;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ------------------------------Footer------------------------------ */
+
+.footer{
+    background-color: black;
+}
+
+.footer_container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15rem;
+    padding: 20px 10px;
+    color:white;
+}
+
+/*ABOUT US - VỀ CHÚNG TÔI*/
+.Aboutus h3{
+    font-size:2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.75);
+}
+
+.Aboutus p span{
+    font-size:1.5rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.Aboutus p{
+    font-size: 1rem;
+    text-align: justify;
+    word-spacing: 5px;
+}
+
+/*Team Members*/
+.teammem h3{
+    font-size:2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.75);
+}
+
+.teammem span{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.teammem a{
+    text-decoration: none;
+    color:white;
+    font-size: 1.2rem;
+    word-spacing: 5px;
+    display: block;
+    margin:10px 0px;
+}
+
+.teammem a:hover {
+    text-decoration: none;
+    color:aqua;
+    font-size: 1.2rem;
+    word-spacing: 5px;
+    font-weight: bold;
+}
+/*CONTACT - LIÊN LẠC*/
+
+.contact h3{
+    font-size:2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.75);
+}
+
+.contact span{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.contact p{
+    color:white;
+    font-size: 1rem;
+    word-spacing: 5px;
+    display: block;
+    margin:10px 0px;
+}
+
+.footer_bar{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: red;
+    border-top: 1px solid white;
+}
