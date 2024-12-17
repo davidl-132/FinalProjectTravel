@@ -80,7 +80,7 @@ nav .nav-container{
     display: flex;
     justify-content: space-between;
     padding: 25px;
-    background: linear-gradient(to right, #FFFACD, #E6F7D4);
+    background: #FFFACD;
 }
 
 #left {
